@@ -1,0 +1,61 @@
+{
+	"name": "@vidatics/vue-foundation-form-components",
+	"version": "1.0.0",
+	"private": false,
+	"scripts": {
+		"serve": "vue-cli-service serve",
+		"build": "vue-cli-service build --target lib --name main ./src/lib.ts",
+		"lint": "vue-cli-service lint",
+		"test:unit": "vue-cli-service test:unit"
+	},
+	"dependencies": {},
+	"devDependencies": {
+		"core-js": "^3.6.4",
+		"jquery": "^3.4.1",
+		"luxon": "^1.22.0",
+		"typeahead.js": "^0.11.1",
+		"uuid": "^3.4.0",
+		"rxjs": "^6.5.4",
+		"vue-rx": "^6.2.0",
+		"@fortawesome/fontawesome-free": "^5.12.0",
+		"@types/chai": "^4.2.8",
+		"@types/jquery": "^3.3.31",
+		"@types/lodash": "^4.14.149",
+		"@types/luxon": "^1.21.0",
+		"@types/mocha": "^7.0.1",
+		"@types/typeahead": "^0.11.32",
+		"@types/uuid": "^3.4.7",
+		"@vue/cli-plugin-babel": "^4.1.2",
+		"@vue/cli-plugin-typescript": "^4.1.2",
+		"@vue/cli-plugin-unit-mocha": "^4.1.2",
+		"@vue/cli-service": "^4.1.2",
+		"@vue/test-utils": "1.0.0-beta.31",
+		"chai": "^4.1.2",
+		"foundation-sites": "^6.6.1",
+		"lodash": "^4.17.15",
+		"sass": "^1.25.0",
+		"sass-loader": "^8.0.2",
+		"typescript": "^3.7.5",
+		"vue": "^2.6.11",
+		"vue-class-component": "^7.2.2",
+		"vue-property-decorator": "^8.3.0",
+		"vue-template-compiler": "^2.6.11"
+	},
+	"peerDependencies": {
+		"core-js": "^3.6.4",
+		"jquery": "^3.4.1",
+		"luxon": "^1.22.0",
+		"typeahead.js": "^0.11.1",
+		"uuid": "^3.4.0",
+		"rxjs": "^6.5.4",
+		"vue-rx": "^6.2.0"
+	},
+	"main": "./dist/main.common.js",
+	"types": "./dist/src/lib.d.ts",
+	"files": [
+		"dist/*",
+		"/dist/src/lib.d.ts",
+		"*.json",
+		"*.js"
+	]
+}

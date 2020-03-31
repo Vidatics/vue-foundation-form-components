@@ -1,0 +1,30 @@
+image: ubuntu:18.04
+
+before_script:
+  - apt-get update
+  - DEBIAN_FRONTEND=noninteractive apt-get install -y curl zip openssh-client git
+  - curl -sL https://deb.nodesource.com/setup_11.x | bash -
+  - DEBIAN_FRONTEND=noninteractive apt-get install -y nodejs
+  - npm config set registry https://nexus.vidatics.org/repository/npm-combined/
+  - npm install -g npm-cli-login
+  - npm-cli-login
+  - npm install
+
+stages:
+  - test
+  - bundle
+  - deploy
+
+test:
+  stage: test
+  script:
+    - npm run test:unit
+
+deploy:
+  stage: deploy
+  only:
+    - tags
+  script:
+    - npm version --no-git-tag-version `git describe --tags --abbrev=0`
+    - npm run build
+    - npm publish
